@@ -10,8 +10,6 @@ You can play the game directly at [Veggie Raid](https://www.greenfoot.org/scenar
 </ul>
 
 ## Installation instructions
-<ol>
-    <li>Download and install [Greenfoot](https://www.greenfoot.org/download).</li>
-    <li>Download the `gfar` file available in the repository.</li>
-    <li>Open the `gfar` file with Greenfoot.</li>
-</ol>
+1. Download and install [Greenfoot](https://www.greenfoot.org/download).
+2. Download the `gfar` file available in the repository.
+3. Open the `gfar` file with Greenfoot.
