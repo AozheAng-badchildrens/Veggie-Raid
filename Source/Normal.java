@@ -1,0 +1,58 @@
+import greenfoot.*;
+
+/**
+ * Same as Flag zombie just different pictures
+ * 
+ * @author (Michael Chen) 
+ * @version (June 22, 2022)
+ */
+public class Normal extends Zombie
+{
+    // associated number - 0
+    
+    // images
+    private static String normalImages[] = new String[7];
+    private static String eatImages[] = new String[7];
+    /**
+     * Constructor for objects of class Normal
+     */
+    public Normal()
+    {
+        health = 20;
+        damage = 6;
+        speed = 0.5;
+        for (int i=0; i<7; i++){
+            normalImages[i] = "BasicWalk" + String.valueOf(i + 1) + ".png";
+        }
+        for (int i=0; i<7; i++){
+            eatImages[i] = "BasicEat" + String.valueOf(i + 1) + ".png";
+        }
+    }
+
+    /**
+     * eat animation
+     */
+    public void eatAnimation(){
+        normalAnimationCounter = 0;
+        eatAnimationChange++;
+        if (eatAnimationChange == 8){
+            setImage(eatImages[eatAnimationCounter++]);
+            eatAnimationCounter %= 7;
+            eatAnimationChange = 0;
+        }
+    }
+    
+    /**
+     * walk animation
+     */
+    public void walkAnimation(){
+        eatAnimationCounter = 0;
+        normalAnimationChange++;
+        if (normalAnimationChange == 8){
+            setImage(normalImages[normalAnimationCounter++]);
+            normalAnimationCounter %= 7;
+            normalAnimationChange = 0;
+        }
+    }
+    
+}
